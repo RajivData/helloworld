@@ -1,6 +1,7 @@
 FROM openjdk:17
 MAINTAINER "rajiv"
-COPY target/hello-world-spring-0.0.1-SNAPSHOT.jar  /usr/app/
+COPY target/*.jar hello-world-spring-0.0.1-SNAPSHOT.jar
 WORKDIR /usr/app/
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "/usr/app/hello-world-spring-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "hello-world-spring-0.0.1-SNAPSHOT.jar"]
+
